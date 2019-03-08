@@ -9,19 +9,21 @@ export const slideInAnimation =
           position: "absolute",
           top: 0,
           left: 0,
-          width: "100%"
+          width: "100%",
+          "backface-visibility": "hidden",
+          "transform-style": "preserve-3d"
         })
       ]),
       query(":enter", [
-        style({ left: "100%" })
+        style({ transform: "rotateY(180deg)" })
       ]),
       query(":leave", animateChild()),
       group([
         query(":leave", [
-          animate("300ms ease-out", style({ left: "-100%" }))
+          animate("800ms ease-out", style({ transform: "rotateY(180deg)" }))
         ]),
         query(":enter", [
-          animate("300ms ease-out", style({ left: "0%" }))
+          animate("800ms ease-out", style({ transform: "rotateY(0deg)" }))
         ])
       ]),
       query(":enter", animateChild())

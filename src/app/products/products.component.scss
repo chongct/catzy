@@ -1,0 +1,15 @@
+@import "../../variables.scss";
+
+nav {
+  background-color: $background-color !important;
+  border-bottom: 2px solid $primary-color;
+  box-shadow: 2px 2px 4px $primary-color;
+
+  ul.navbar-nav li.nav-item {
+    cursor: pointer;
+  }
+}
+
+div.product-container p {
+  text-align: center;
+}
